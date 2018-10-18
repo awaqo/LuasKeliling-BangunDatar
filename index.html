@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="button">
+		<input type="button" value="Persegi" onclick="persegi()">
+	</div>
+	<div class="button">
+		<input type="button" value="Persegi Panjang" onclick="ppanjang()">
+	</div>
+	<div class="button">
+		<input type="button" value="Segitiga" onclick="segitiga()">
+	</div>
+	<div class="button">
+		<input type="button" value="Trapesium" onclick="trapesium()">
+	</div>
+	<div class="button">
+		<input type="button" value="Layang - Layang" onclick="llayang()">
+	</div>
+
+	<!-- <button onclick="persegi()">Persegi</button>
+	<button onclick="ppanjang()">Persegi Panjang</button>
+	<button onclick="segitiga()">Segitiga</button>
+	<button onclick="trapesium()">Trapesium</button>
+	<button onclick="llayang()">Layang - Layang</button> -->
+	<script type="text/javascript">
+		function persegi(){
+			do{
+				var sisiP = prompt("Masukkan Sisi")
+				var hP = alert("Luas : " +sisiP * +sisiP+ "                                          |                                       Keliling : " +sisiP * 4)
+				var ulangi = confirm("Anda ingin mengulangi menghitung luas dan keliling persegi?")
+			} while(ulangi)
+		}
+
+		function ppanjang(){
+			do{
+				var pP = prompt("Masukkan Panjang")
+				var lP = prompt("Masukkan Lebar")
+				var kpp = 2 * (Number (pP) + Number(lP));
+				var lpP = alert("Luas : " +pP * +lP)
+				var kpP = alert("Keliling : " +kpp)
+				var ulangi = confirm("Anda ingin mengulangi menghitung luas dan keliling persegi panjang?")
+			} while(ulangi)
+		}
+
+		function segitiga(){
+			do{
+				var alasS = prompt("Masukkan Alas")
+				var tinggiS = prompt("Masukkan Tinggi")
+				var sisiMS1 = prompt("Masukkan sisi Miring 1")
+				var sisiMS2 = prompt("Masukkan sisi Miring 2")
+				var ls = alasS * tinggiS / 2;
+				var ks = Number(alasS) + Number(sisiMS1) + Number(sisiMS2);
+				var lkS = alert("Luas : " +ls+ "                                          |                                       Keliling : " +ks)
+				var ulangi = confirm("Anda ingin mengulangi menghitung luas dan keliling segitiga?")
+			} while(ulangi)
+		}
+
+		function trapesium(){
+			do{
+				var aT = prompt("Masukkan sisi AB")
+				var bT = prompt("Masukkan sisi CD")
+				var tT = prompt("Masukkan Tinggi")
+				var sMT1 = prompt("Masukkan sisi Miring 1")
+				var sMT2 = prompt("Masukkan sisi Miring 2")
+				var lTrap = Number(aT) + Number(bT) * tT / 2;
+				var kTrap = Number(aT) + Number(bT) + Number(sMT1) + Number(sMT2);
+				var LTrap = alert("Luas : " +lTrap)
+				var KTrap = alert("Keliling : " +kTrap)
+				var ulangi = confirm("Anda ingin mengulangi menghitung luas dan keliling Trapesium?")
+			} while(ulangi)
+		}
+
+		function llayang(){
+			do{
+				var d1 = prompt("Masukkan Diagonal 1")
+				var d2 = prompt("Masukkan Diagonal 2")
+				var saL = prompt("Masukkan Sisi A")
+				var sbL = prompt("Masukkan Sisi B")
+				var llLayang = d1 * d2 / 2;
+				var klLayang = 2 * (Number(saL) + Number(sbL));
+				var LlLayang = alert("Luas : " +llLayang)
+				var KlLayang = alert("Keliling : " +klLayang)
+				var ulangi = confirm("Anda ingin mengulangi menghitung luas dan keliling Layang - layang?")
+			} while(ulangi)
+		}
+	</script>
+</body>
+</html>
